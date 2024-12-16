@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <hr>
+                <p class="text-center"> Create and view your blogs as you like!</p>
+                <!-- <button>Create</button> -->
+                <% if (locals.posts) {%>
+                    <div class="article_container">
+                        <% for (let i = 0; i < posts.length; i++) {%>
+                            <div class="article">
+                                <div>
+                                    <a><%=i + 1 %>. <%= posts[i][1].title%></a>
+                                </div>
+                                <div class="options">
+                                    <!-- passing the i'th post -->
+                                    <a href="/viewPost/<%= posts[i][0] %>">View</a> 
+                                    <!-- passing the i'th post -->
+                                    <a href="/deletePost<%= posts[i][0] %>">Delete</a>
+                                </div>
+                            </div>
+                        <% } %>
+                    </div>
+                <% } %>
+                
+
+                <form action="/createBlog" method="get">
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-primary rounded-pill px-3" type="submit">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body> 
+</html>

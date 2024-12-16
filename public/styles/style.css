@@ -1,0 +1,11 @@
+.article_container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

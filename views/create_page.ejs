@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/createPage.css">
+
+    <!-- Ensure the path above is correct -->
+</head>
+<body>
+    <form action="/postBlog" method="post">
+        <div>
+            <legend>
+                Create Blog
+            </legend>
+        </div>
+
+        <div>
+            <label for="title">Title : </label>
+            <input type="text" id="title" name="Title"/>
+        </div>
+
+        <div>
+            <label for="blog">Blog : </label>
+            <input type="text" id="blog" name="Blog">
+        </div>
+
+        <div>
+            <button type="submit"> Post </button>
+        </div>
+    </form>
+</body>
+</html>
