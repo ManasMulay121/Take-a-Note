@@ -35,8 +35,10 @@ app.post("/postBlog", (req, res) => {
     res.render(path.join(__dirname + '/views/home.ejs'), {posts});
 })
 
-app.post("/deletePost", (req, res) => {
-    
+app.get("/deletePost/:id", (req, res) => {
+    const index = req.params.id - 1;
+    posts.splice(index, 1);
+    res.render(path.join(__dirname + '/views/home.ejs'), {posts});
 })
 
 app.listen(port, () => {

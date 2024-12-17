@@ -23,16 +23,16 @@
                                 </div>
                                 <div class="options">
                                     <!-- passing the i'th post -->
-                                    <a href="/viewPost/<%= posts[i][0] %>">View</a> 
+                                    <a href="/viewPost/<%= i + 1 %>" class="view"><button>View</button></a> 
                                     <!-- passing the i'th post -->
-                                    <a href="/deletePost<%= posts[i][0] %>">Delete</a>
+                                    <a href="/deletePost/<%= i + 1 %>" class="delete"><button>Delete</button></a>
                                 </div>
                             </div>
                         <% } %>
                     </div>
                 <% } %>
                 
-
+                <br>
                 <form action="/createBlog" method="get">
                     <div class="d-flex justify-content-center">
                         <button class="btn btn-primary rounded-pill px-3" type="submit">Create</button>
