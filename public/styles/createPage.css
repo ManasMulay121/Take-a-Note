@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,500;1,500&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+*{
+    font-family: 'Inter', 'Helvetica', 'Roboto','Sans-serif';
+    /* background-color: #370e4e; */
+    /* color: #EBD3F8; */
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    margin-top: 2rem; 
+    margin-left: 6rem; 
+    margin-right: 6rem;
+}
+
+input{
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 1rem;
+}
+
+#blog{
+    height: 200px; /* Set the desired height */
+}
